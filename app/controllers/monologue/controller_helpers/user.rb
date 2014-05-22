@@ -6,6 +6,7 @@ module Monologue
       extend ActiveSupport::Concern
 
       included do
+        skip_before_action :authenticate_user!
         helper_method :monologue_current_user
       end
 
